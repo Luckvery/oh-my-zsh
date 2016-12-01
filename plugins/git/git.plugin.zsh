@@ -153,6 +153,7 @@ compdef _git ggpush=git-checkout
 
 alias ggsup='git branch --set-upstream-to=origin/$(git_current_branch)'
 alias gpsup='git push --set-upstream origin $(git_current_branch)'
+alias gpsupo='git push --set-upstream origin $(git_current_branch) |& perl -nle "print $& if m{((https|http))(.*)}" | xargs open'
 
 alias ghh='git help'
 
